@@ -47,24 +47,36 @@ accordion-group .card {
 .custom {
     .input-group-text {
         font-size: 10px !important;
-        border: solid 1px #f96332 !important;
+        border: solid 1px #212529a3 !important;
         background-color: white !important;
-        color: #f96332 !important;
+        color: #1c2023 !important;
         padding: 10px !important;
     }
 
     .input-group .input-group-prepend .input-group-text {
-        border-left: 1px solid #f96332 !important;
+        border-left: 1px solid #212529a3 !important;
     }
     .input-group .input-group-append .input-group-text {
-        border-right: 1px solid #f96332 !important;
-        border-left: 1px solid #f96332 !important;
+        border-right: 1px solid #212529a3 !important;
+        border-left: 1px solid #212529a3 !important;
     }
     .input-group-append {
         margin-left: 0px !important;
     }
     .form-check-radio input {
         display: none !important;
+    }
+    textarea.form-control {
+        border: 1px solid #212529a3 !important;
+        border-radius: 15px !important;
+    }
+
+    .form-control {
+        border: 1px solid #212529a3 !important;
+    }
+
+    .form-control:focus {
+        border: 1px solid #f96332 !important;
     }
 }
 
@@ -105,7 +117,11 @@ accordion-group .card {
     left: 8px !important;
 }
 
-textarea.form-control {
-    border: 1px solid #e3e3e3 !important;
-    border-radius: 15px !important;
+.fab-list li{
+    text-align: right;
+    cursor:pointer;
+}
+ul.fab-list {
+    padding-left: 0;
+    list-style: none;
 }

@@ -1,5 +1,21 @@
-<div class="wrapper">
+<div class="wrapper" #top>
     <div class="container mt-100">
+        <app-multi-fab>
+            <ul class="fab-list">
+                <li>
+                    <span class="badge badge-success">Start Chatting</span>
+                    <button class="btn btn-success btn-icon btn-round" type="button">
+                        <i class="now-ui-icons ui-2_chat-round"></i>
+                    </button>
+                </li>
+                <li (click)="scroll(top)">
+                    <span class="badge badge-info">Back to Top</span>
+                    <button class="btn btn-info btn-icon btn-round" type="button">
+                        <i class="now-ui-icons arrows-1_minimal-up"></i>
+                    </button>
+                </li>
+            </ul>
+        </app-multi-fab>
         <h3 class="title text-muted">EDIT PROFILE</h3>
         <div class="mt-4 card-container custom">
             <accordion>
@@ -10,7 +26,7 @@
                         <i *ngIf="!isOpen['static-1']" class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-xs-12 col-md-3">
+                        <div class="col-12 col-md-3">
                             <div ngbDropdown>
                                 <button class="btn btn-block btn-primary btn-simple btn-round" id="dropdownBasic1" ngbDropdownToggle>Profile Created For</button>
                                 <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
@@ -24,7 +40,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-md-2">
+                        <div class="col-12 col-md-2">
                             <div ngbDropdown>
                                 <button class="btn btn-block btn-primary btn-simple btn-round" id="dropdownBasic1" ngbDropdownToggle>Marital Status</button>
                                 <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
@@ -35,7 +51,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-md-2">
+                        <div class="col-12 col-md-2">
                             <div ngbDropdown>
                                 <button class="btn btn-block btn-primary btn-simple btn-round" id="dropdownBasic1" ngbDropdownToggle>Mother Tongue</button>
                                 <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
@@ -46,7 +62,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-md-2">
+                        <div class="col-12 col-md-2">
                             <div ngbDropdown>
                                 <button class="btn btn-block btn-primary btn-simple btn-round" id="dropdownBasic1" ngbDropdownToggle>Subcaste</button>
                                 <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
@@ -59,38 +75,38 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-12 col-md-12">
+                        <div class="col-12 col-md-12">
                             <div class="row">
-                                <div class="col-xs-12 col-md-3">
+                                <div class="col-12 col-md-3">
                                     <label class="form-check-label text-primary ml-2 mr-2 pt-2">
                                         First Name
                                     </label>
                                 </div>
-                                <div class="col-xs-12 col-md-6">
+                                <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <input type="text" value="" placeholder="Enter First Name" class="form-control" />
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-xs-12 col-md-3">
+                                <div class="col-12 col-md-3">
                                     <label class="form-check-label text-primary ml-2 mr-2 pt-2">
                                         Last Name
                                     </label>
                                 </div>
-                                <div class="col-xs-12 col-md-6">
+                                <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <input type="text" value="" placeholder="Enter Last Name" class="form-control" />
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-xs-12 col-md-3">
+                                <div class="col-12 col-md-3">
                                     <label class="form-check-label text-primary ml-2 mr-2 pt-2">
                                         Gender
                                     </label>
                                 </div>
-                                <div class="col-xs-12 col-md-9">
+                                <div class="col-12 col-md-9">
                                     <div class="form-check form-check-radio form-check-inline">
                                         <label class="form-check-label">
                                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> Male
@@ -106,12 +122,12 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-xs-12 col-md-3">
+                                <div class="col-12 col-md-3">
                                     <label class="form-check-label text-primary ml-2 mr-2 pt-2">
                                         Physical Status
                                     </label>
                                 </div>
-                                <div class="col-xs-12 col-md-9">
+                                <div class="col-12 col-md-9">
                                     <div class="form-check form-check-radio form-check-inline">
                                         <label class="form-check-label">
                                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> Normal
@@ -127,12 +143,12 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-xs-12 col-md-3">
+                                <div class="col-12 col-md-3">
                                     <label class="form-check-label text-primary ml-2 mr-2 pt-2">
                                         Complexion
                                     </label>
                                 </div>
-                                <div class="col-xs-12 col-md-9">
+                                <div class="col-12 col-md-9">
                                     <div class="form-check form-check-radio form-check-inline">
                                         <label class="form-check-label">
                                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> Very Fair
@@ -166,12 +182,12 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-xs-12 col-md-3">
+                                <div class="col-12 col-md-3">
                                     <label class="form-check-label text-primary ml-2 mr-2 pt-2">
                                         Body Type
                                     </label>
                                 </div>
-                                <div class="col-xs-12 col-md-9">
+                                <div class="col-12 col-md-9">
                                     <div class="form-check form-check-radio form-check-inline">
                                         <label class="form-check-label">
                                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> Slim
@@ -199,12 +215,12 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-xs-12 col-md-3">
+                                <div class="col-12 col-md-3">
                                     <label class="form-check-label text-primary ml-2 mr-2 pt-2">
                                         Eating Habits
                                     </label>
                                 </div>
-                                <div class="col-xs-12 col-md-9">
+                                <div class="col-12 col-md-9">
                                     <div class="form-check form-check-radio form-check-inline">
                                         <label class="form-check-label">
                                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> Vegetarian
@@ -232,12 +248,12 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-xs-12 col-md-3">
+                                <div class="col-12 col-md-3">
                                     <label class="form-check-label text-primary ml-2 mr-2 pt-2">
                                         Smoking Habits
                                     </label>
                                 </div>
-                                <div class="col-xs-12 col-md-9">
+                                <div class="col-12 col-md-9">
                                     <div class="form-check form-check-radio form-check-inline">
                                         <label class="form-check-label">
                                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> None
@@ -259,12 +275,12 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-xs-12 col-md-3">
+                                <div class="col-12 col-md-3">
                                     <label class="form-check-label text-primary ml-2 mr-2 pt-2">
                                         Drinking Habits
                                     </label>
                                 </div>
-                                <div class="col-xs-12 col-md-9">
+                                <div class="col-12 col-md-9">
                                     <div class="form-check form-check-radio form-check-inline">
                                         <label class="form-check-label">
                                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> None
@@ -286,12 +302,12 @@
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <div class="col-xs-12 col-md-3">
+                                <div class="col-12 col-md-3">
                                     <label class="form-check-label text-primary ml-2 mr-2 pt-2">
                                         Weight
                                     </label>
                                 </div>
-                                <div class="col-xs-12 col-md-2">
+                                <div class="col-12 col-md-2">
                                     <div class="input-group">
                                         <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
                                         <div class="input-group-append">
@@ -301,12 +317,12 @@
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <div class="col-xs-12 col-md-3">
+                                <div class="col-12 col-md-3">
                                     <label class="form-check-label text-primary ml-2 mr-2 pt-2">
                                         Height
                                     </label>
                                 </div>
-                                <div class="col-xs-6 col-md-2">
+                                <div class="col-6 col-md-2">
                                     <div class="input-group">
                                         <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
                                         <div class="input-group-append">
@@ -314,7 +330,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xs-6 col-md-2">
+                                <div class="col-6 col-md-2">
                                     <div class="input-group mb-3">
                                         <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
                                         <div class="input-group-append">
@@ -324,44 +340,44 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-xs-12 col-md-3">
+                                <div class="col-12 col-md-3">
                                     <label class="form-check-label text-primary ml-2 mr-2 pt-2">
                                         Languages Known
                                     </label>
                                 </div>
-                                <div class="col-xs-12 col-md-6">
+                                <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <input type="text" value="" placeholder="" class="form-control" />
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-xs-12 col-md-3">
+                                <div class="col-12 col-md-3">
                                     <label class="form-check-label text-primary ml-2 mr-2 pt-2">
                                         About Me
                                     </label>
                                 </div>
-                                <div class="col-xs-12 col-md-6">
+                                <div class="col-12 col-md-6">
                                     <div class="form-group">
                                         <textarea class="form-control" name="name" rows="4" cols="80" placeholder="Write something about yourself..."></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mt-2">
-                                <div class="offset-md-6 col-xs-12 col-md-2">
+                                <div class="offset-md-6 col-12 col-md-2">
                                     <button class="btn btn-block btn-round btn-simple btn-primary">Cancel</button>
                                 </div>
-                                <div class="col-xs-12 col-md-2">
+                                <div class="col-12 col-md-2">
                                     <button class="btn btn-block btn-round btn-simple btn-primary">Save</button>
                                 </div>
-                                <div class="col-xs-12 col-md-2">
+                                <div class="col-12 col-md-2">
                                     <button class="btn btn-block btn-round btn-primary">Save and Next</button>
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="col-xs-12 col-md-4">
+                        <!-- <div class="col-12 col-md-4">
                             <div class="row mt-2">
-                                <div class="offset-sm-3 col-xs-12 col-sm-6">
+                                <div class="offset-sm-3 col-12 col-sm-6">
                                     <input style="cursor:pointer;display:none" type="file" name="" id="file">
                                     <div class="form-group center">
                                         <label class="btn btn-block btn-simple btn-primary btn-round" for="file">Upload Image</label>
@@ -378,18 +394,97 @@
                 </accordion-group>
                 <accordion-group [(isOpen)]="isOpen['static-2']">
                     <div accordion-heading class="text-primary">
-                        <strong>Contact</strong>
+                        <strong>Images</strong>
                         <i *ngIf="isOpen['static-2']" class="fa fa-chevron-up pull-right" aria-hidden="true"></i>
                         <i *ngIf="!isOpen['static-2']" class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
                     </div>
-                    <p>
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                        non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
-                        moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-                        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                        Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
-                        synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    </p>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row text-center">
+                                        <div class="col-12 col-md-12">
+                                            <img height="100" width="100" src="assets/img/avatar.jpg" alt="..." class="rounded-circle">
+                                        </div>
+                                    </div>
+                                    <h5 class="card-title text-center">Profile Picture</h5>
+                                    <p class="card-text">
+                                        This is the main picture which will be visible on your profile to you and other users.
+                                    </p>
+                                    <div class="row text-center">
+                                        <div class="col-12 col-md-12">
+                                            <input style="cursor:pointer;display:none" type="file" name="" id="file">
+                                            <div class="form-group center">
+                                                <label class="btn btn-simple btn-primary btn-round" for="file">Upload Image</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Additional Picture</h5>
+                                    <p class="card-text">
+                                        You can upload at max four images in this section. These images will be displayed on your profile as photo gallery.
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-6 col-md-3 mb-2 text-center">
+                                            <img height="100" width="100" src="assets/img/avatar.jpg" alt="Avatar" class="rounded-circle">
+                                            <button type="button" class="btn btn-neutral">
+                                                <strong>
+                                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                    Delete
+                                                </strong>
+                                            </button>
+                                        </div>
+                                        <div class="col-6 col-md-3 mb-2 text-center">
+                                            <img height="100" width="100" src="assets/img/avatar.jpg" alt="Avatar" class="rounded-circle">
+                                            <button type="button" class="btn btn-neutral">
+                                                <strong>
+                                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                    Delete
+                                                </strong>
+                                            </button>
+                                        </div>
+                                        <div class="col-6 col-md-3 mb-2 text-center">
+                                            <img height="100" width="100" src="assets/img/avatar.jpg" alt="Avatar" class="rounded-circle">
+                                            <button type="button" class="btn btn-neutral">
+                                                <strong>
+                                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                    Delete
+                                                </strong>
+                                            </button>
+                                        </div>
+                                        <div class="col-6 col-md-3 mb-2 text-center">
+                                            <img height="100" width="100" src="assets/img/avatar.jpg" alt="Avatar" class="rounded-circle">
+                                            <button type="button" class="btn btn-neutral">
+                                                <strong>
+                                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                    Delete
+                                                </strong>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row text-center">
+                                        <div class="col-12 col-md-12">
+                                            <input style="cursor:pointer;display:none" type="file" name="" id="file">
+                                            <div class="form-group center">
+                                                <label class="btn btn-simple btn-primary btn-round" for="file">Upload Image</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="image-overlay-container">
+                                <div class="image-overlay">
+                                    <label class="image-overlay-content btn btn-primary btn-round" for="file">Delete Image</label>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
                 </accordion-group>
                 <accordion-group [(isOpen)]="isOpen['static-3']">
                     <div accordion-heading class="text-primary">

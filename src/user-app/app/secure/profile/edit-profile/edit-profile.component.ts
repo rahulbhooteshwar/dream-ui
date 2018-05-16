@@ -11,12 +11,15 @@ export class EditProfileComponent implements OnInit {
     is = is;
     isOpen = {
         'static-1': true,
-        'static-2': false,
+        'static-2': true,
         'static-3': false
     };
     constructor(public uiService: UIService) {}
 
     ngOnInit() {
         this.uiService.setTransparentNavbar(false);
+    }
+    scroll(el) {
+        el.scrollIntoView();
     }
 }

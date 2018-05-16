@@ -1,0 +1,8 @@
+<div class="bottom-right">
+  <div *ngIf="expanded" class="fab-content">
+    <ng-content></ng-content>
+  </div>
+  <button [ngClass]="{'btn-simple':expanded}" (click)="expanded=!expanded" class="float-right btn btn-lg btn-primary btn-icon btn-round" type="button">
+      <i class="now-ui-icons location_bookmark"></i>
+  </button>
+</div>
