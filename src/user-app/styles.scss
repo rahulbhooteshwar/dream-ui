@@ -1,0 +1,111 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap.scss';
+
+@media (min-width: 480px) and (max-width: 823px) and (orientation: landscpae) {
+    .page-header {
+        height: 180vh !important;
+    }
+}
+
+.bg-grey {
+    background: #eeeeee !important;
+}
+
+.card-header a {
+    text-decoration: none;
+}
+.form-dropdown {
+    border: none !important;
+    background-color: #ffffff1a !important;
+    text-align: left !important;
+    color: #ffffffd6 !important;
+    padding-left: 20px !important;
+}
+
+.form-dropdown i {
+    margin-right: 15px !important;
+    font-size: 16px !important;
+}
+.form-dropdown:focus,
+.form-dropdown:active {
+    border: none !important;
+    box-shadow: 0 0 0 0.2rem #007bff00 !important;
+    background-color: #ffffff57 !important;
+}
+
+.mt-100 {
+    margin-top: 100px !important;
+}
+
+.card-container .card {
+    margin-bottom: -5px !important;
+}
+
+accordion-group .card {
+    overflow: visible !important;
+}
+.custom {
+    .input-group-text {
+        font-size: 10px !important;
+        border: solid 1px #f96332 !important;
+        background-color: white !important;
+        color: #f96332 !important;
+        padding: 10px !important;
+    }
+
+    .input-group .input-group-prepend .input-group-text {
+        border-left: 1px solid #f96332 !important;
+    }
+    .input-group .input-group-append .input-group-text {
+        border-right: 1px solid #f96332 !important;
+        border-left: 1px solid #f96332 !important;
+    }
+    .input-group-append {
+        margin-left: 0px !important;
+    }
+    .form-check-radio input {
+        display: none !important;
+    }
+}
+
+.form-check-radio input[type='radio']:checked + .form-check-sign::after {
+    background-color: #f96332 !important;
+    border-color: #f96332 !important;
+}
+
+.btn-round-left {
+    border-top-left-radius: 30px !important;
+    border-bottom-left-radius: 30px !important;
+}
+
+.btn-round-right {
+    border-top-right-radius: 30px !important;
+    border-bottom-right-radius: 30px !important;
+}
+
+.min-w-10 {
+    min-width: 10% !important;
+}
+.min-w-45 {
+    min-width: 45% !important;
+}
+.min-w-45 {
+    min-width: 45% !important;
+}
+
+.form-check-radio .form-check-sign::before,
+.form-check-radio .form-check-sign::after {
+    border: 1px solid #212529a3 !important;
+}
+
+.form-check-radio input[type='radio']:checked + .form-check-sign::after {
+    width: 10px !important;
+    height: 10px !important;
+    top: 8px !important;
+    left: 8px !important;
+}
+
+textarea.form-control {
+    border: 1px solid #e3e3e3 !important;
+    border-radius: 15px !important;
+}

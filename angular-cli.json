@@ -1,31 +1,22 @@
 {
     "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
     "project": {
-        "name": "pk2-pro-angular"
+        "name": "dream-ui"
     },
     "apps": [
         {
-            "root": "src",
-            "outDir": "dist",
-            "assets": [
-              "assets",
-                "favicon.ico"
-            ],
+            "root": "src/user-app",
+            "outDir": "dist/dream-ui/user-app",
+            "assets": ["assets"],
             "index": "index.html",
             "main": "main.ts",
-            "polyfills": "polyfills.ts",
-            "test": "test.ts",
-            "tsconfig": "tsconfig.app.json",
-            "testTsconfig": "tsconfig.spec.json",
-            "prefix": "app",
-            "styles": [
-              "styles.scss",
-              "assets/sass/now-ui-kit.scss",
-              "assets/css/demo.css"
-            ],
-            "scripts": [
-              "../node_modules/rellax/rellax.min.js"
-            ],
+            "polyfills": "../polyfills.ts",
+            "test": "../test.ts",
+            "tsconfig": "../tsconfig.app.json",
+            "testTsconfig": "../tsconfig.spec.json",
+            "prefix": "user-app",
+            "styles": ["styles.scss", "assets/sass/now-ui-kit.scss"],
+            "scripts": ["../../node_modules/rellax/rellax.min.js"],
             "environmentSource": "environments/environment.ts",
             "environments": {
                 "dev": "environments/environment.ts",
@@ -33,11 +24,6 @@
             }
         }
     ],
-    "e2e": {
-        "protractor": {
-            "config": "./protractor.conf.js"
-        }
-    },
     "lint": [
         {
             "project": "src/tsconfig.app.json"

@@ -1,0 +1,126 @@
+<div class="wrapper">
+    <div class="page-header" filter-color="black">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/bg5.jpg') ;">
+        </div>
+        <div class="container">
+            <div class="content-center">
+                <div class="photo-container">
+                    <img src="assets/img/ryan.jpg" alt="">
+                </div>
+                <h3 class="title">
+                    <a routerLink="/secure/profile/edit">Ryan Scheinder</a>
+                </h3>
+                <p class="category">Photographer</p>
+                <div class="content">
+                    <div class="social-description">
+                        <h2>26</h2>
+                        <p>Comments</p>
+                    </div>
+                    <div class="social-description">
+                        <h2>26</h2>
+                        <p>Comments</p>
+                    </div>
+                    <div class="social-description">
+                        <h2>48</h2>
+                        <p>Bookmarks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-tabs" *ngIf="!is.mobile()">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-xl-12 ml-auto mr-auto">
+                    <div class="card">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <ngb-tabset [justify]="'center'" class="text-center">
+                                    <ngb-tab title="About">
+                                        <ng-template ngbTabContent>
+                                            <p>I think that’s a responsibility that I have, to push possibilities, to show people,
+                                                this is the level that things could be at. So when you get something that
+                                                has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities.
+                                                I will be the leader of a company that ends up being worth billions of dollars,
+                                                because I got the answers. I understand culture. I am the nucleus.</p>
+                                        </ng-template>
+                                    </ngb-tab>
+                                    <ngb-tab title="Contact">
+                                        <ng-template ngbTabContent>
+                                            <p> I will be the leader of a company that ends up being worth billions of dollars,
+                                                because I got the answers. I understand culture. I am the nucleus. I think
+                                                that’s a responsibility that I have, to push possibilities, to show people,
+                                                this is the level that things could be at. I think that’s a responsibility
+                                                that I have, to push possibilities, to show people, this is the level that
+                                                things could be at. </p>
+                                        </ng-template>
+                                    </ngb-tab>
+                                    <ngb-tab title="Education">
+                                        <ng-template ngbTabContent>
+                                            <p>I think that’s a responsibility that I have, to push possibilities, to show people,
+                                                this is the level that things could be at. So when you get something that
+                                                has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities.
+                                                I will be the leader of a company that ends up being worth billions of dollars,
+                                                because I got the answers. I understand culture. I am the nucleus.</p>
+                                        </ng-template>
+                                    </ngb-tab>
+                                </ngb-tabset>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Tabs on plain Card -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4" *ngIf="is.mobile()">
+        <accordion [closeOthers]="true">
+            <accordion-group [(isOpen)]="isOpen['static-1']">
+                <div accordion-heading class="text-primary">
+                    <strong>About</strong>
+                    <i *ngIf="isOpen['static-1']" class="fa fa-chevron-up pull-right" aria-hidden="true"></i>
+                    <i *ngIf="!isOpen['static-1']" class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                </div>
+                <p>
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                    non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                    tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil
+                    anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                    excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+                    you probably haven't heard of them accusamus labore sustainable VHS.
+                </p>
+            </accordion-group>
+            <accordion-group [(isOpen)]="isOpen['static-2']">
+                <div accordion-heading class="text-primary">
+                    <strong>Contact</strong>
+                    <i *ngIf="isOpen['static-2']" class="fa fa-chevron-up pull-right" aria-hidden="true"></i>
+                    <i *ngIf="!isOpen['static-2']" class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                </div>
+                <p>
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                    non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                    tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil
+                    anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                    excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+                    you probably haven't heard of them accusamus labore sustainable VHS.
+                </p>
+            </accordion-group>
+            <accordion-group [(isOpen)]="isOpen['static-3']">
+                <div accordion-heading class="text-primary">
+                    <strong>Education</strong>
+                    <i *ngIf="isOpen['static-3']" class="fa fa-chevron-up pull-right" aria-hidden="true"></i>
+                    <i *ngIf="!isOpen['static-3']" class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                </div>
+                <p>
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                    non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                    tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil
+                    anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                    excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+                    you probably haven't heard of them accusamus labore sustainable VHS.
+                </p>
+            </accordion-group>
+        </accordion>
+    </div>
+    <user-app-footer></user-app-footer>
+</div>
