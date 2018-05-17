@@ -117,11 +117,20 @@ accordion-group .card {
     left: 8px !important;
 }
 
-.fab-list li{
+.fab-list li {
     text-align: right;
-    cursor:pointer;
+    cursor: pointer;
 }
 ul.fab-list {
     padding-left: 0;
     list-style: none;
+}
+.datepicker-container {
+    .form-control[readonly] {
+        /* background-color: #E3E3E3; */
+        /* color: #888; */
+        cursor: pointer;
+        background-color: transparent;
+        color: #2c2c2c;
+    }
 }

@@ -9,6 +9,7 @@ import * as is from 'is_js';
 })
 export class EditProfileComponent implements OnInit {
     is = is;
+    sampleDate = new Date();
     isOpen = {
         'static-1': true,
         'static-2': true,
