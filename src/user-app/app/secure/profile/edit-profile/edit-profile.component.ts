@@ -13,7 +13,7 @@ export class EditProfileComponent implements OnInit {
     isOpen = {
         'static-1': true,
         'static-2': true,
-        'static-3': false
+        'static-3': true
     };
     constructor(public uiService: UIService) {}
 
