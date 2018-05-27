@@ -14,12 +14,17 @@ import { EditCareerComponent } from './edit-profile/edit-career/edit-career.comp
 import { EditPartnerPrefComponent } from './edit-profile/edit-partner-pref/edit-partner-pref.component';
 import { EditHobbiesIntComponent } from './edit-profile/edit-hobbies-int/edit-hobbies-int.component';
 import { EditFamilyDetailsComponent } from './edit-profile/edit-family-details/edit-family-details.component';
+import { EditPhoneComponent } from './edit-profile/edit-phone/edit-phone.component';
+import { EditEmailComponent } from './edit-profile/edit-email/edit-email.component';
+import { EditLocationComponent } from './edit-profile/edit-location/edit-location.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     imports: [
         CommonModule,
         NgbModule.forRoot(),
         FormsModule,
+        HttpClientModule,
         AccordionModule.forRoot(),
         RouterModule.forChild([
             {
@@ -33,6 +38,6 @@ import { EditFamilyDetailsComponent } from './edit-profile/edit-family-details/e
         ]),
         SharedModule
     ],
-    declarations: [ProfileComponent, EditProfileComponent, EditBasicInfoComponent, EditImagesComponent, EditCareerComponent, EditPartnerPrefComponent, EditHobbiesIntComponent, EditFamilyDetailsComponent]
+    declarations: [ProfileComponent, EditProfileComponent, EditBasicInfoComponent, EditImagesComponent, EditCareerComponent, EditPartnerPrefComponent, EditHobbiesIntComponent, EditFamilyDetailsComponent, EditPhoneComponent, EditEmailComponent, EditLocationComponent]
 })
 export class ProfileModule {}

@@ -8,117 +8,313 @@
                     <img src="assets/img/ryan.jpg" alt="">
                 </div>
                 <h3 class="title">
-                    <a routerLink="/secure/profile/edit">Ryan Scheinder</a>
+                    <a routerLink="/secure/profile/edit">John Doe</a>
                 </h3>
                 <p class="category">Photographer</p>
-                <div class="content">
+                <div class="content mb-4">
                     <div class="social-description">
-                        <h2>26</h2>
-                        <p>Comments</p>
+                        <h2>25</h2>
+                        <p>Age</p>
                     </div>
                     <div class="social-description">
-                        <h2>26</h2>
-                        <p>Comments</p>
+                        <h2>5' 8''</h2>
+                        <p>Height</p>
                     </div>
                     <div class="social-description">
-                        <h2>48</h2>
-                        <p>Bookmarks</p>
+                        <h2>76 Kg</h2>
+                        <p>Weight</p>
                     </div>
                 </div>
             </div>
+            <a class="down text-center pointer" (click)="scroll(details)">
+                <i class="icon fa fa-3x fa-chevron-down" aria-hidden="true"></i>
+            </a>
         </div>
     </div>
-    <div class="section section-tabs" *ngIf="!is.mobile()">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-xl-12 ml-auto mr-auto">
-                    <div class="card">
-                        <div class="nav-tabs-navigation">
-                            <div class="nav-tabs-wrapper">
-                                <ngb-tabset [justify]="'center'" class="text-center">
-                                    <ngb-tab title="About">
-                                        <ng-template ngbTabContent>
-                                            <p>I think that’s a responsibility that I have, to push possibilities, to show people,
-                                                this is the level that things could be at. So when you get something that
-                                                has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities.
-                                                I will be the leader of a company that ends up being worth billions of dollars,
-                                                because I got the answers. I understand culture. I am the nucleus.</p>
-                                        </ng-template>
-                                    </ngb-tab>
-                                    <ngb-tab title="Contact">
-                                        <ng-template ngbTabContent>
-                                            <p> I will be the leader of a company that ends up being worth billions of dollars,
-                                                because I got the answers. I understand culture. I am the nucleus. I think
-                                                that’s a responsibility that I have, to push possibilities, to show people,
-                                                this is the level that things could be at. I think that’s a responsibility
-                                                that I have, to push possibilities, to show people, this is the level that
-                                                things could be at. </p>
-                                        </ng-template>
-                                    </ngb-tab>
-                                    <ngb-tab title="Education">
-                                        <ng-template ngbTabContent>
-                                            <p>I think that’s a responsibility that I have, to push possibilities, to show people,
-                                                this is the level that things could be at. So when you get something that
-                                                has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities.
-                                                I will be the leader of a company that ends up being worth billions of dollars,
-                                                because I got the answers. I understand culture. I am the nucleus.</p>
-                                        </ng-template>
-                                    </ngb-tab>
-                                </ngb-tabset>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Tabs on plain Card -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container mt-4" *ngIf="is.mobile()">
+    <div class="container mt-5" #details>
         <accordion [closeOthers]="true">
             <accordion-group [(isOpen)]="isOpen['static-1']">
-                <div accordion-heading class="text-primary">
-                    <strong>About</strong>
-                    <i *ngIf="isOpen['static-1']" class="fa fa-chevron-up pull-right" aria-hidden="true"></i>
-                    <i *ngIf="!isOpen['static-1']" class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                <div accordion-heading class="pt-4">
+                    <h5 class="text-primary">
+                        <i class="fa fa-info-circle"></i>
+                        <span class="heading-sm">Basic Information</span>
+                        <i *ngIf="isOpen['static-1']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
+                        <i *ngIf="!isOpen['static-1']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
+                    </h5>
                 </div>
-                <p>
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                    non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                    tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil
-                    anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                    excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
-                    you probably haven't heard of them accusamus labore sustainable VHS.
-                </p>
+                <div class="row mb-2">
+                    <div class="col-12 col-md-4">
+                        <h6 class="text-primary">
+                            <i class="fa fa-user-plus" aria-hidden="true"></i>
+                            Profile Created By
+                            <span class="ml-2 badge badge-info">Parents</span>
+                        </h6>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="far fa-id-card"></i>
+                                Name
+                            </h6>
+                            <span class="text-muted">John Doe</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="far fa-calendar" aria-hidden="true"></i>
+                                Date Of Birth
+                            </h6>
+                            <span class="text-muted">Feb 09, 1991</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-venus-mars" aria-hidden="true"></i>
+                                Gender
+                            </h6>
+                            <span class="text-muted">Male</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-male" aria-hidden="true"></i>
+                                <i class="fa fa-female" aria-hidden="true"></i>
+                                Marital Status
+                            </h6>
+                            <span class="text-muted">Unmarried</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                Subcaste
+                            </h6>
+                            <span class="text-muted">Kadwa Patidar</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-language" aria-hidden="true"></i>
+                                Mother Tongue
+                            </h6>
+                            <span class="text-muted">Hindi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fas fa-arrows-alt-v" aria-hidden="true"></i>
+                                Height
+                            </h6>
+                            <span class="text-muted">5' 8''</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-weight"></i>
+                                Weight
+                            </h6>
+                            <span class="text-muted">75 Kg</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-male" aria-hidden="true"></i>
+                                <i class="fab fa-accessible-icon"></i>
+                                Physical Status
+                            </h6>
+                            <span class="text-muted">Normal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-male" aria-hidden="true"></i>
+                                Body Type
+                            </h6>
+                            <span class="text-muted">Unmarried</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="far fa-smile" aria-hidden="true"></i>
+                                Complexion
+                            </h6>
+                            <span class="text-muted">Kadwa Patidar</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-language" aria-hidden="true"></i>
+                                Languages Known
+                            </h6>
+                            <span class="text-muted">Hindi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fas fa-utensils"></i>
+                                Eating Habits
+                            </h6>
+                            <span class="text-muted">Vegetarian</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-beer" aria-hidden="true"></i>
+                                Drinking Habits
+                            </h6>
+                            <span class="text-muted">Kadwa Patidar</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fas fa-smoking"></i>
+                                Smoking Habits
+                            </h6>
+                            <span class="text-muted">None</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fas fa-quote-right"></i>
+                                About Me
+                            </h6>
+                            <span class="text-muted">I am the Best....</span>
+                        </div>
+                    </div>
+                </div>
             </accordion-group>
             <accordion-group [(isOpen)]="isOpen['static-2']">
-                <div accordion-heading class="text-primary">
-                    <strong>Contact</strong>
-                    <i *ngIf="isOpen['static-2']" class="fa fa-chevron-up pull-right" aria-hidden="true"></i>
-                    <i *ngIf="!isOpen['static-2']" class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                <div accordion-heading class="pt-4">
+                    <h5 class="text-primary">
+                        <i class="fa fa-images"></i>
+                        <span class="heading-sm">Image Gallery</span>
+                        <i *ngIf="isOpen['static-2']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
+                        <i *ngIf="!isOpen['static-2']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
+                    </h5>
                 </div>
-                <p>
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                    non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                    tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil
-                    anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                    excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
-                    you probably haven't heard of them accusamus labore sustainable VHS.
-                </p>
+                <div class="row justify-content-center mt-2 mb-2">
+                    <div class="col-12  col-md-8">
+                        <ngb-carousel [interval]="'2000'">
+                            <ng-template ngbSlide>
+                                <img [src]="'https://picsum.photos/900/500?image=140'" alt="Random first slide">
+                            </ng-template>
+                            <ng-template ngbSlide>
+                                <img [src]="'https://picsum.photos/900/500?image=141'" alt="Random second slide">
+                            </ng-template>
+                            <ng-template ngbSlide>
+                                <img [src]="'https://picsum.photos/900/500?image=142'" alt="Random third slide">
+                            </ng-template>
+                            <ng-template ngbSlide>
+                                <img [src]="'https://picsum.photos/900/500?image=143'" alt="Random third slide">
+                            </ng-template>
+                            <ng-template ngbSlide>
+                                <img [src]="'https://picsum.photos/900/500?image=144'" alt="Random third slide">
+                            </ng-template>
+                        </ngb-carousel>
+                    </div>
+                </div>
             </accordion-group>
             <accordion-group [(isOpen)]="isOpen['static-3']">
-                <div accordion-heading class="text-primary">
-                    <strong>Education</strong>
-                    <i *ngIf="isOpen['static-3']" class="fa fa-chevron-up pull-right" aria-hidden="true"></i>
-                    <i *ngIf="!isOpen['static-3']" class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                <div accordion-heading class="pt-4">
+                    <h5 class="text-primary">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span class="heading-sm">Education & Occupation</span>
+                        <i *ngIf="isOpen['static-3']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
+                        <i *ngIf="!isOpen['static-3']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
+                    </h5>
                 </div>
-                <p>
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                    non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                    tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil
-                    anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                    excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
-                    you probably haven't heard of them accusamus labore sustainable VHS.
-                </p>
+                <div class="row mb-2">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                Highest Qualification
+                            </h6>
+                            <span class="text-muted">Graduation</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-clipboard" aria-hidden="true"></i>
+                                Degree Achieved
+                            </h6>
+                            <span class="text-muted">B.E. (CSE)</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-clipboard" aria-hidden="true"></i>
+                                Additional Qualification
+                            </h6>
+                            <span class="text-muted">B.Ed.</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fas fa-toolbox"></i>
+                                Occupation
+                            </h6>
+                            <span class="text-muted">Software Engineer</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fas fa-american-sign-language-interpreting"></i>
+                                Employment Type
+                            </h6>
+                            <span class="text-muted">Private</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fas fa-wrench"></i>
+                                Occupation Details
+                            </h6>
+                            <span class="text-muted">Payment and Technology</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fas fa-money-check-alt"></i>
+                                Yearly Income
+                            </h6>
+                            <span class="text-muted">5,00,000 INR</span>
+                        </div>
+                    </div>
+                </div>
             </accordion-group>
         </accordion>
     </div>

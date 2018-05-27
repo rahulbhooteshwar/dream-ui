@@ -1,4 +1,4 @@
-<div class="wrapper" #top>
+<div class="wrapper mb-5" #top>
     <div class="container mt-100">
         <app-multi-fab>
             <ul class="fab-list">
@@ -18,56 +18,81 @@
         </app-multi-fab>
         <h3 class="title text-muted">EDIT PROFILE</h3>
         <div class="mt-4 card-container custom">
-            <accordion>
-                <accordion-group [(isOpen)]="isOpen['static-1']">
+            <accordion [closeOthers]="true">
+                <accordion-group [(isOpen)]="isOpen['basic']">
                     <div accordion-heading class="text-primary">
                         <strong>Basic Information</strong>
-                        <i *ngIf="isOpen['static-1']" class="fa fa-chevron-up pull-right" aria-hidden="true"></i>
-                        <i *ngIf="!isOpen['static-1']" class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        <i *ngIf="isOpen['basic']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
+                        <i *ngIf="!isOpen['basic']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
                     </div>
                     <user-app-edit-basic-info></user-app-edit-basic-info>
                 </accordion-group>
-                <accordion-group [(isOpen)]="isOpen['static-2']">
+                <accordion-group [(isOpen)]="isOpen['images']">
                     <div accordion-heading class="text-primary">
                         <strong>Images</strong>
-                        <i *ngIf="isOpen['static-2']" class="fa fa-chevron-up pull-right" aria-hidden="true"></i>
-                        <i *ngIf="!isOpen['static-2']" class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        <i *ngIf="isOpen['images']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
+                        <i *ngIf="!isOpen['images']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
                     </div>
                     <user-app-edit-images></user-app-edit-images>
                 </accordion-group>
-                <accordion-group [(isOpen)]="isOpen['static-3']">
+                <accordion-group [(isOpen)]="isOpen['career']">
                     <div accordion-heading class="text-primary">
                         <strong>Education and Occupation</strong>
-                        <i *ngIf="isOpen['static-3']" class="fa fa-chevron-up pull-right" aria-hidden="true"></i>
-                        <i *ngIf="!isOpen['static-3']" class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        <i *ngIf="isOpen['career']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
+                        <i *ngIf="!isOpen['career']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
                     </div>
                     <user-app-edit-career></user-app-edit-career>
                 </accordion-group>
-                <accordion-group [(isOpen)]="isOpen['static-3']">
+                <accordion-group [(isOpen)]="isOpen['hobbies_int']">
                     <div accordion-heading class="text-primary">
                         <strong>Hobbies & Interests</strong>
-                        <i *ngIf="isOpen['static-3']" class="fa fa-chevron-up pull-right" aria-hidden="true"></i>
-                        <i *ngIf="!isOpen['static-3']" class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        <i *ngIf="isOpen['hobbies_int']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
+                        <i *ngIf="!isOpen['hobbies_int']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
                     </div>
                     <user-app-edit-hobbies-int></user-app-edit-hobbies-int>
                 </accordion-group>
-                <accordion-group [(isOpen)]="isOpen['static-3']">
+                <accordion-group [(isOpen)]="isOpen['family_details']">
                     <div accordion-heading class="text-primary">
                         <strong>Family Details</strong>
-                        <i *ngIf="isOpen['static-3']" class="fa fa-chevron-up pull-right" aria-hidden="true"></i>
-                        <i *ngIf="!isOpen['static-3']" class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        <i *ngIf="isOpen['family_details']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
+                        <i *ngIf="!isOpen['family_details']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
                     </div>
                     <user-app-edit-family-details></user-app-edit-family-details>
                 </accordion-group>
-                <accordion-group [(isOpen)]="isOpen['static-3']">
+                <accordion-group [(isOpen)]="isOpen['partner_pref']">
                     <div accordion-heading class="text-primary">
                         <strong>Partner Preference</strong>
-                        <i *ngIf="isOpen['static-3']" class="fa fa-chevron-up pull-right" aria-hidden="true"></i>
-                        <i *ngIf="!isOpen['static-3']" class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        <i *ngIf="isOpen['partner_pref']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
+                        <i *ngIf="!isOpen['partner_pref']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
                     </div>
                     <user-app-edit-partner-pref></user-app-edit-partner-pref>
+                </accordion-group>
+                <accordion-group [(isOpen)]="isOpen['email']">
+                    <div accordion-heading class="text-primary">
+                        <strong>Email Address</strong>
+                        <i *ngIf="isOpen['email']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
+                        <i *ngIf="!isOpen['email']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
+                    </div>
+                    <user-app-edit-email></user-app-edit-email>
+                </accordion-group>
+                <accordion-group [(isOpen)]="isOpen['phone']">
+                    <div accordion-heading class="text-primary">
+                        <strong>Phone</strong>
+                        <i *ngIf="isOpen['phone']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
+                        <i *ngIf="!isOpen['phone']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
+                    </div>
+                    <user-app-edit-phone></user-app-edit-phone>
+                </accordion-group>
+                <accordion-group [(isOpen)]="isOpen['location']">
+                    <div accordion-heading class="text-primary">
+                        <strong>Location</strong>
+                        <i *ngIf="isOpen['location']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
+                        <i *ngIf="!isOpen['location']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
+                    </div>
+                    <user-app-edit-location></user-app-edit-location>
                 </accordion-group>
             </accordion>
         </div>
     </div>
+    <user-app-footer></user-app-footer>
 </div>

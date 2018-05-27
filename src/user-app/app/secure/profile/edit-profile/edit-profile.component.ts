@@ -11,9 +11,16 @@ export class EditProfileComponent implements OnInit {
     is = is;
     sampleDate = new Date();
     isOpen = {
-        'static-1': true,
-        'static-2': true,
-        'static-3': true
+        'basic': true,
+        'images': false,
+        'career': false,
+        'hobbies_int': false,
+        'family_details': false,
+        'partner_pref': false,
+        'email': false,
+        'phone': false,
+        'location': false
+
     };
     constructor(public uiService: UIService) {}
 

@@ -134,3 +134,23 @@ ul.fab-list {
         color: #2c2c2c;
     }
 }
+
+.down {
+    position: absolute;
+    bottom: 80px;
+    left: 48%;
+}
+
+.down .icon {
+    position: absolute;
+    height: 189px;
+    animation: pulse 0.5s infinite;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.heading-sm {
+    font-size: 15px !important;
+}

@@ -25,4 +25,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
     ngOnDestroy() {
         this.uiService.unSetGlobalUIStyle('profile-page');
     }
+    scroll(el) {
+        el.scrollIntoView();
+    }
 }
