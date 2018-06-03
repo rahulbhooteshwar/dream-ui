@@ -12,9 +12,13 @@ import * as _ from 'lodash';
 export class ProfileComponent implements OnInit, OnDestroy {
     is = is;
     isOpen = {
-        'static-1': true,
-        'static-2': false,
-        'static-3': false
+        'basic': true,
+        'images': false,
+        'education': false,
+        'hobbies': false,
+        'family': false,
+        'partner': false,
+        'contact': false,
     };
     constructor(public uiService: UIService) {}
 

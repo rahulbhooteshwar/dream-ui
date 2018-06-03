@@ -26,20 +26,22 @@
                     </div>
                 </div>
             </div>
-            <a class="down text-center pointer" (click)="scroll(details)">
+            <a class="down text-center pointer" (click)="scroll(header_end)">
                 <i class="icon fa fa-3x fa-chevron-down" aria-hidden="true"></i>
             </a>
         </div>
+        <div #header_end></div>
     </div>
-    <div class="container mt-5" #details>
-        <accordion [closeOthers]="true">
-            <accordion-group [(isOpen)]="isOpen['static-1']">
-                <div accordion-heading class="pt-4">
+    <div class="container mt-5">
+        <h3 class="title text-muted float-left">PROFILE DETAILS</h3>
+        <accordion>
+            <accordion-group [(isOpen)]="isOpen['basic']">
+                <div accordion-heading class="pointer pt-4">
                     <h5 class="text-primary">
                         <i class="fa fa-info-circle"></i>
                         <span class="heading-sm">Basic Information</span>
-                        <i *ngIf="isOpen['static-1']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
-                        <i *ngIf="!isOpen['static-1']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
+                        <i *ngIf="isOpen['basic']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
+                        <i *ngIf="!isOpen['basic']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
                     </h5>
                 </div>
                 <div class="row mb-2">
@@ -210,13 +212,13 @@
                     </div>
                 </div>
             </accordion-group>
-            <accordion-group [(isOpen)]="isOpen['static-2']">
-                <div accordion-heading class="pt-4">
+            <accordion-group [(isOpen)]="isOpen['images']">
+                <div accordion-heading class="pointer pt-4">
                     <h5 class="text-primary">
                         <i class="fa fa-images"></i>
                         <span class="heading-sm">Image Gallery</span>
-                        <i *ngIf="isOpen['static-2']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
-                        <i *ngIf="!isOpen['static-2']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
+                        <i *ngIf="isOpen['images']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
+                        <i *ngIf="!isOpen['images']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
                     </h5>
                 </div>
                 <div class="row justify-content-center mt-2 mb-2">
@@ -241,13 +243,13 @@
                     </div>
                 </div>
             </accordion-group>
-            <accordion-group [(isOpen)]="isOpen['static-3']">
-                <div accordion-heading class="pt-4">
+            <accordion-group [(isOpen)]="isOpen['education']">
+                <div accordion-heading class="pointer pt-4">
                     <h5 class="text-primary">
                         <i class="fas fa-graduation-cap"></i>
                         <span class="heading-sm">Education & Occupation</span>
-                        <i *ngIf="isOpen['static-3']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
-                        <i *ngIf="!isOpen['static-3']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
+                        <i *ngIf="isOpen['education']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
+                        <i *ngIf="!isOpen['education']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
                     </h5>
                 </div>
                 <div class="row mb-2">
@@ -312,6 +314,433 @@
                                 Yearly Income
                             </h6>
                             <span class="text-muted">5,00,000 INR</span>
+                        </div>
+                    </div>
+                </div>
+            </accordion-group>
+            <accordion-group [(isOpen)]="isOpen['hobbies']">
+                <div accordion-heading class="pointer pt-4">
+                    <h5 class="text-primary">
+                        <i class="fas fa-smile"></i>
+                        <span class="heading-sm">Hobbies & Interests</span>
+                        <i *ngIf="isOpen['hobbies']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
+                        <i *ngIf="!isOpen['hobbies']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
+                    </h5>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fas fa-smile"></i>
+                                Hobbies
+                            </h6>
+                            <span class="text-muted">Reading Books</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="far fa-thumbs-up"></i>
+                                Interests
+                            </h6>
+                            <span class="text-muted">Computer Programming</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fas fa-music"></i>
+                                Music
+                            </h6>
+                            <span class="text-muted">Sufi</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fas fa-utensils"></i>
+                                Food
+                            </h6>
+                            <span class="text-muted">North Indian Food</span>
+                        </div>
+                    </div>
+                </div>
+            </accordion-group>
+            <accordion-group [(isOpen)]="isOpen['family']">
+                <div accordion-heading class="pointer pt-4">
+                    <h5 class="text-primary">
+                        <i class="fa fa-info-circle"></i>
+                        <span class="heading-sm">Family Details</span>
+                        <i *ngIf="isOpen['family']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
+                        <i *ngIf="!isOpen['family']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
+                    </h5>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="far fa-id-card"></i>
+                                Family Type
+                            </h6>
+                            <span class="text-muted">Joint Family</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="far fa-calendar" aria-hidden="true"></i>
+                                Family Value
+                            </h6>
+                            <span class="text-muted">Traditional</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-venus-mars" aria-hidden="true"></i>
+                                Status
+                            </h6>
+                            <span class="text-muted">Middle Class</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-male" aria-hidden="true"></i>
+                                <i class="fa fa-female" aria-hidden="true"></i>
+                                Ancestral/Family Origin
+                            </h6>
+                            <span class="text-muted">Gujrat</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                Father's Occupation
+                            </h6>
+                            <span class="text-muted">Farmer</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-language" aria-hidden="true"></i>
+                                Mother's Occupation
+                            </h6>
+                            <span class="text-muted">Home Maker</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fas fa-arrows-alt-v" aria-hidden="true"></i>
+                                Height
+                            </h6>
+                            <span class="text-muted">5' 8''</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-weight"></i>
+                                Brothers
+                            </h6>
+                            <span class="text-muted">2</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-male" aria-hidden="true"></i>
+                                <i class="fab fa-accessible-icon"></i>
+                                Sisters
+                            </h6>
+                            <span class="text-muted">1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-male" aria-hidden="true"></i>
+                                Married Brothers
+                            </h6>
+                            <span class="text-muted">1</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="far fa-smile" aria-hidden="true"></i>
+                                Married Sisters
+                            </h6>
+                            <span class="text-muted">1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fas fa-quote-right"></i>
+                                About My Family
+                            </h6>
+                            <span class="text-muted">My Family is the Best....</span>
+                        </div>
+                    </div>
+                </div>
+            </accordion-group>
+            <accordion-group [(isOpen)]="isOpen['partner']">
+                <div accordion-heading class="pointer pt-4">
+                    <h5 class="text-primary">
+                        <i class="fa fa-info-circle"></i>
+                        <span class="heading-sm">Partner Preferences</span>
+                        <i *ngIf="isOpen['partner']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
+                        <i *ngIf="!isOpen['partner']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
+                    </h5>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-male" aria-hidden="true"></i>
+                                <i class="fa fa-female" aria-hidden="true"></i>
+                                Marital Status
+                            </h6>
+                            <span class="text-muted">Unmarried</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                Subcaste
+                            </h6>
+                            <span class="text-muted">Kadwa Patidar</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                Citizenship
+                            </h6>
+                            <span class="text-muted">Indian</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-language" aria-hidden="true"></i>
+                                Mother Tongue
+                            </h6>
+                            <span class="text-muted">Hindi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="far fa-id-card"></i>
+                                Qualification
+                            </h6>
+                            <span class="text-muted">Graduation</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="far fa-calendar" aria-hidden="true"></i>
+                                Occupation
+                            </h6>
+                            <span class="text-muted">Doesn't Matter</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-venus-mars" aria-hidden="true"></i>
+                                Employment Type
+                            </h6>
+                            <span class="text-muted">Doesn't Matter</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-venus-mars" aria-hidden="true"></i>
+                                Minimum Yearly Income
+                            </h6>
+                            <span class="text-muted">Doesn't Matter</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fas fa-arrows-alt-v" aria-hidden="true"></i>
+                                Age
+                            </h6>
+                            <span class="text-muted">22 - 25 Yrs</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-male" aria-hidden="true"></i>
+                                <i class="fab fa-accessible-icon"></i>
+                                Physical Status
+                            </h6>
+                            <span class="text-muted">Normal</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fas fa-arrows-alt-v" aria-hidden="true"></i>
+                                Manglik
+                            </h6>
+                            <span class="text-muted">No</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-male" aria-hidden="true"></i>
+                                <i class="fab fa-accessible-icon"></i>
+                                Star
+                            </h6>
+                            <span class="text-muted">Doesn't Matter</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fas fa-arrows-alt-v" aria-hidden="true"></i>
+                                Height
+                            </h6>
+                            <span class="text-muted">5' 2'' - 5' 8''</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-weight"></i>
+                                Weight
+                            </h6>
+                            <span class="text-muted">50-70 kg</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-male" aria-hidden="true"></i>
+                                Body Type
+                            </h6>
+                            <span class="text-muted">Unmarried</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="far fa-smile" aria-hidden="true"></i>
+                                Complexion
+                            </h6>
+                            <span class="text-muted">Kadwa Patidar</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fas fa-utensils"></i>
+                                Eating Habits
+                            </h6>
+                            <span class="text-muted">Vegetarian</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fa fa-beer" aria-hidden="true"></i>
+                                Drinking Habits
+                            </h6>
+                            <span class="text-muted">Kadwa Patidar</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fas fa-smoking"></i>
+                                Smoking Habits
+                            </h6>
+                            <span class="text-muted">None</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <h6 class="text-primary">
+                                <i class="fas fa-quote-right"></i>
+                                About My Partner
+                            </h6>
+                            <span class="text-muted">I am the Best....</span>
+                        </div>
+                    </div>
+                </div>
+            </accordion-group>
+            <accordion-group [(isOpen)]="isOpen['contact']">
+                <div accordion-heading class="pointer pt-4">
+                    <h5 class="text-primary">
+                        <i class="fa fa-info-circle"></i>
+                        <span class="heading-sm">Contact Details</span>
+                        <i *ngIf="isOpen['contact']" class="fa fa-chevron-up float-right" aria-hidden="true"></i>
+                        <i *ngIf="!isOpen['contact']" class="fa fa-chevron-down float-right" aria-hidden="true"></i>
+                    </h5>
+                </div>
+                <div class="row mb-2">
+
+                    <div class="col-12 col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-3 text-primary">Phone Number</h6>
+                                <h5 class="card-subtitle mb-2 text-muted">
+                                    +919806118907
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-3 text-primary">Email Address</h6>
+                                <span class="card-subtitle mb-2 text-muted">
+                                    john.doe@gmail.com
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-3 text-primary">Permanent Address</h6>
+                                <span class="card-subtitle mb-2 text-muted">
+                                    Shastri Nagar, Sarangpur Dist Rajgarh Madhya Pradesh, India
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
